@@ -17,10 +17,11 @@ const SectionFallback = () => (
 
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl">
+    <div className="relative w-full overflow-hidden">
       <Navbar />
       <Hero />
-      <Suspense fallback={<SectionFallback />}>
+      <div className="mx-auto max-w-7xl w-full">
+        <Suspense fallback={<SectionFallback />}>
         <About />
         <Projects />
         <Experiences />
@@ -28,6 +29,7 @@ const App = () => {
         <Contact />
         <Footer />
       </Suspense>
+      </div>
     </div>
   );
 };

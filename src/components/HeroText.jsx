@@ -67,19 +67,19 @@ const HeroText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex- flex-col space-y-6 md:hidden">
+      <div className="flex flex-col items-center justify-center space-y-4 md:hidden px-2 w-full max-[350px]:px-0">
         <motion.p
-          className="text-4xl font-medium"
+          className="text-2xl sm:text-4xl font-medium text-center"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Deepkumar
+          Hi, I'm Deepkumar
         </motion.p>
-        <div>
+        <div className="flex flex-col items-center justify-center w-full">
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-3xl sm:text-5xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -95,11 +95,11 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-white text-7xl"
+              className="font-bold text-white text-5xl sm:text-7xl max-[350px]:text-4xl text-center inline-block"
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-black text-neutral300"
+            className="text-3xl sm:text-4xl max-[350px]:text-2xl font-black text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -112,12 +112,12 @@ const HeroText = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 2.1 }}
-            className="flex justify-center gap-4 mt-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6 sm:mt-8 px-4 sm:px-0 w-full"
           >
-            <a href="#work" className="px-6 py-3 text-base font-semibold text-center rounded-lg cursor-pointer shadow-[0_0_20px_rgba(122,87,219,0.3)] bg-radial from-lavender to-royal hover-animation text-white">
+            <a href="#work" className="w-[180px] sm:w-auto px-6 py-3 text-base font-semibold text-center rounded-lg cursor-pointer shadow-[0_0_20px_rgba(122,87,219,0.3)] bg-radial from-lavender to-royal hover-animation text-white">
               View my work
             </a>
-            <a href="https://drive.google.com/file/d/1bRzPS7ydu4PwvaDuwAlHkjNvQBfocN_l/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="px-6 py-3 text-base font-medium text-center border border-white/20 rounded-lg cursor-pointer bg-white/5 hover:-translate-y-1 duration-200 text-white hover:bg-white/10">
+            <a href="https://drive.google.com/file/d/1bRzPS7ydu4PwvaDuwAlHkjNvQBfocN_l/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="w-[180px] sm:w-auto px-6 py-3 text-base font-medium text-center border border-white/20 rounded-lg cursor-pointer bg-white/5 hover:-translate-y-1 duration-200 text-white hover:bg-white/10">
               Resume
             </a>
           </motion.div>

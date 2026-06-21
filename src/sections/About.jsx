@@ -120,7 +120,7 @@ const About = () => {
         >
           <img
             src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            className="absolute scale-[1.5] -right-[3rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10 max-w-[85%] md:max-w-[80%]">
             <p className="headtext text-2xl font-bold leading-tight md:text-4xl">Hi, I'm Deepkumar Das</p>
@@ -216,22 +216,12 @@ const About = () => {
           </figure>
         </div>
 
-        {/* Grid 4: Contact */}
-        <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">
-              Do you want to start a project together?
-            </p>
-            <CopyEmailButton />
-          </div>
-        </div>
-
-        {/* Grid 5: Tech Stack */}
+        {/* Grid 4 (Positioned first visually): Tech Stack */}
         <div
           onClick={() => setActiveModal('techStack')}
           className="cursor-pointer grid-default-color grid-5"
         >
-          <div className="z-10 w-full pr-20 md:w-[64%] md:pr-28 lg:w-[60%]">
+          <div className="z-10 w-full md:w-[64%] md:pr-28 lg:w-[60%]">
             <p className="mb-2 text-2xl font-bold md:text-3xl">Tech Stack</p>
             <p className="text-base leading-relaxed md:text-lg text-neutral-400">
               I specialize in a variety of languages, frameworks, and tools that
@@ -239,8 +229,18 @@ const About = () => {
               <span className="block mt-2 text-sm text-neutral-500">(Click for details)</span>
             </p>
           </div>
-          <div className="absolute inset-y-0 right-[-42%] w-[78%] pointer-events-none scale-[1.0] md:inset-y-9 md:right-[-20%] md:w-[48%] lg:right-[-12%] lg:w-[40%] md:scale-[1.62]">
+          <div className="absolute inset-y-0 right-0 w-[50%] pointer-events-none scale-[0.8] md:inset-y-9 md:right-[-20%] md:w-[48%] lg:right-[-12%] lg:w-[40%] md:scale-[1.62]">
             <Frameworks />
+          </div>
+        </div>
+
+        {/* Grid 5 (Positioned last visually): Contact */}
+        <div className="grid-special-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center headtext">
+              Do you want to start a project together?
+            </p>
+            <CopyEmailButton />
           </div>
         </div>
       </div>

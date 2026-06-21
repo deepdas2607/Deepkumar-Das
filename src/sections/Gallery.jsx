@@ -40,19 +40,19 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section className="items-start mt-25 md:mt-35 c-space" id="gallery">
+    <section className="items-start mt-25 md:mt-35 c-space overflow-hidden" id="gallery">
       <h2 className="text-heading">Image Gallery</h2>
       <p className="subtext mt-3 max-w-xl">
         A glimpse of my world — drag to explore, click to know the details behind each image.
       </p>
 
       <div
-        className="relative mt-12 w-full rounded-3xl overflow-hidden"
+        className="relative mt-8 sm:mt-12 w-full rounded-2xl sm:rounded-3xl overflow-hidden"
         style={{ height: isMobile ? '450px' : '600px' }}
       >
         {/* Subtle border glow */}
         <div
-          className="absolute inset-0 rounded-3xl pointer-events-none z-10"
+          className="absolute inset-0 rounded-2xl sm:rounded-3xl pointer-events-none z-10"
           style={{
             boxShadow: 'inset 0 0 0 1px rgba(92,51,204,0.18), 0 0 60px rgba(92,51,204,0.08)'
           }}
@@ -61,10 +61,10 @@ export default function Gallery() {
         <DomeGallery
           images={GALLERY_IMAGES}
           overlayBlurColor="#030412"
-          fit={0.55}
-          minRadius={isMobile ? 320 : 500}
-          openedImageWidth={isMobile ? "300px" : "460px"}
-          openedImageHeight={isMobile ? "400px" : "520px"}
+          fit={isMobile ? 0.75 : 0.55}
+          minRadius={isMobile ? 350 : 500}
+          openedImageWidth={isMobile ? "280px" : "460px"}
+          openedImageHeight={isMobile ? "360px" : "520px"}
           imageBorderRadius="16px"
           openedImageBorderRadius="22px"
           grayscale={false}
